@@ -1,0 +1,26 @@
+{{!-- <!--This is where the page should render the items currently inside the cart -->
+<div>
+    <h2> Items currently in {{home.currentUser.username}}'s cart:</h2>
+    <div class="cart_product">
+      <div>
+        <h3>{{product.product.name}}</h3>
+      </div>
+      <div>
+        <h3>{{product.product.price | currency}}</h3>
+      </div>
+      <div>
+        <div>
+          <p>Quantity: {{product.quantity}}</p>
+          <button (click)="cart.removeFromCart(product, home.currentUser)">Remove</button>
+        </div>
+        <div>
+          <input type="text" placeholder="{{product.quantity}}">
+          <button (click)="cart.updateQuantity(product, home.currentUser)">Update</button>
+        </div>
+      </div>
+    </div>
+    <div class="checkout">
+      <button name="checkout">Checkout</button>
+      <h3>Total Price: {{home.currentUser.cart.totalPrice | currency}}</h3>
+    </div>
+  </div> --}}
