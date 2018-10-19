@@ -14,7 +14,7 @@ router.post('/users', function (req, res) {
   user.save(function (err, user) {
     if (err) console.log(err);
 
-//This logs in newly created user
+//This logs in a newly created user
     req.session.currentUser = user;
     res.json({
       status: 201,
